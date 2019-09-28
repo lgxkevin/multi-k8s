@@ -11,6 +11,6 @@ docker push lgxkevin/muti-server:$SHA
 docker push lgxkevin/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/client-deployments client=lgxkevin/multi-client:$SHA
-kubectl set image deployments/server-deployments server=lgxkevin/multi-server:$SHA
-kubectl set image deployments/worker-deployments worker=lgxkevin/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=lgxkevin/multi-client:$SHA
+kubectl set image deployments/server-deployment server=lgxkevin/multi-server:$SHA
+kubectl set image deployments/worker-deployment worker=lgxkevin/multi-worker:$SHA
