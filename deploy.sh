@@ -3,11 +3,11 @@ docker build -t lgxkevin/multi-server:latest -t lgxkevin/multi-server:$SHA -f ./
 docker build -t lgxkevin/multi-worker:latest -t lgxkevin/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push lgxkevin/multi-client:latest
-docker push lgxkevin/muti-server:latest
+docker push lgxkevin/multi-server:latest
 docker push lgxkevin/multi-worker:latest
 
 docker push lgxkevin/multi-client:$SHA
-docker push lgxkevin/muti-server:$SHA
+docker push lgxkevin/multi-server:$SHA
 docker push lgxkevin/multi-worker:$SHA
 
 kubectl apply -f k8s
